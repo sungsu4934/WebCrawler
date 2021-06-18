@@ -1,4 +1,4 @@
-## 네이버쇼핑몰을 크롤링하는 코드입니다.
+## 네이버쇼핑몰을 크롤링하는 코드입니다. (lxml, selenium)
 
 > 저는 네이버 쇼핑몰 리뷰를 크롤링하는 것에 초점을 맞추었습니다. NLP에 리뷰와 같은 데이터가 필요하신 분은 유용하게 쓰실 수 있을 것입니다.
  *https://search.shopping.naver.com/search/allfrm=NVSHMDL&origQuery=%EC%9A%B0%EC%9C%A0&pagingIndex=1&pagingSize=40&productSet=model&query=%EC%9A%B0%EC%9C%A0&sort=review&timestamp=&viewType=list*
@@ -58,7 +58,7 @@ Step2. 본격적인 수집
 >> Part1에서 수집한 url을 한 개 씩 접근한다. 아래 보이는 코드를 통해 아래 보이는 사진의 위치로 이동한다. Selenium 이동 간 주의할 점은 click()을 위해서는 객체가 화면상에 드러나야 클릭이 가능하기에 충분한 sleep을 주도록한다. 결과적으로 빨간색 부분이 보인다면 해당 과정이 완료된다. 
 
 > Step2. 각 점수별 리뷰 클릭(5점, 4점, 3점, 2점, 1점)
->> 	각 점수별 리뷰를 클릭한다. 만약 3점리뷰가 0개일 때, 클릭 자체가 불가능하기에 try, except를 통한 예외처리가 필요하다. 
+>> 각 점수별 리뷰를 클릭한다. 만약 3점리뷰가 0개일 때, 클릭 자체가 불가능하기에 try, except를 통한 예외처리가 필요하다. 
 
 > Step3. 정보수집
 >> get_info_about_detail()이라는 함수를 통해 정보를 수집한다. 수집 후 데이터프레임에 적재한다.
