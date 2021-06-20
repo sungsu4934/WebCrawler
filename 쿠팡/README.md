@@ -1,6 +1,8 @@
 ## 쿠팡 상품 리뷰 크롤링 (lxml + selenium)
 쿠팡 페이지 크롤링도 마찬가지로 lxml로 url을 수집한 후 상품리뷰는 selenium을 통해 구현합니다. 하지만 selenium으로 구현할 때 단순히 chrome 페이지를 열면, 404 error를 마주합니다. 이를 subprocess 모듈을 통한 chrome.exe로 극복한 것이 본 페이지의 포인트입니다.
 
+https://www.coupang.com/np/search?rocketAll=false&q=자전거&brand=&offerCondition=&filter=&availableDeliveryFilter=&filterType=&isPriceRange=false&priceRange=&minPrice=&maxPrice=&page=1&trcid=&traid=&filterSetByUser=true&channel=user&backgroundColor=&component=&rating=0&sorter=saleCountDesc&listSize=36
+
 
 ### 수집과정
 1. url수집
